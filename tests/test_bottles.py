@@ -29,23 +29,20 @@ Go to the store and buy some more, 99 bottles of beer on the wall."""
         assert Bottles().verse(0) == expected_verse
 
     def test_couple_of_verses(self) -> None:
-        expected_verses: str = """
-        99 bottles of beer on the wall, 99 bottles of beer.
-        Take one down and pass it around, 98 bottles of beer on the wall.
-        
-        98 bottles of beer on the wall, 98 bottles of beer.
-        Take one down and pass it around, 97 bottles of beer on the wall.
-        """
+        expected_verses: str = """99 bottles of beer on the wall, 99 bottles of beer.
+Take one down and pass it around, 98 bottles of beer on the wall.
+
+98 bottles of beer on the wall, 98 bottles of beer.
+Take one down and pass it around, 97 bottles of beer on the wall."""
         assert Bottles().verses(99, 98) == expected_verses
 
     def test_few_verses(self) -> None:
-        expected_verses: str = """
-2 bottles of beer on the wall, 2 bottles of beer.
+        expected_verses: str = """2 bottles of beer on the wall, 2 bottles of beer.
 Take one down and pass it around, 1 bottle of beer on the wall.
-        
+
 1 bottle of beer on the wall, 1 bottle of beer.
 Take it down and pass it around, no more bottles of beer on the wall.
-        
+
 No more bottles of beer on the wall, no more bottles of beer.
 Go to the store and buy some more, 99 bottles of beer on the wall."""
         assert Bottles().verses(2, 0) == expected_verses
